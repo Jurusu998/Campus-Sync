@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Campus Sync – Smart Student Portal</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-4 3-6 6.5-6s6.5 2 6.5 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14c2.5.6 3.5 2.5 3.5 6"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.500 8-8 9-4.500-1-8-4-8-9V6z"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.500 3.500-7 8-7s8 2.500 8 7"/></symbol>
+<symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 20h20"/></symbol>
+<symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></symbol>
+<symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="10" y="10" width="4" height="4"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></symbol>
+<symbol id="i-circuit" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1.5"/><circle cx="15" cy="15" r="1.5"/><path d="M9 10.5V13h6"/></symbol>
+<symbol id="i-case" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18"/></symbol>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</defs></svg>
+
+<header class="top" id="top"><div class="in">
+<button class="brand" onclick="go('home')"><span class="mark">CS</span><span><b>CAMPUS SYNC<span class="badge">SMART</span></b><small>Smart student portal · Campus</small></span></button>
+<nav id="nav"><a href="#" data-v="portals">Portals</a><a href="#" data-v="courses">Courses</a><a href="#" data-v="announcements">Announcements</a><a href="#" data-v="features">Features</a><a href="#" data-v="support">Support</a>
+<button class="btn" onclick="openLogin('student')"><svg class="i"><use href="#i-user"/></svg>Sign In</button></nav>
+</div></header>
+
+<!-- HOME -->
+<div class="view on" id="home">
+<main class="hero" id="portal">
+<svg class="scene" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+<defs><pattern id="win" width="44" height="54" patternUnits="userSpaceOnUse"><rect x="12" y="12" width="18" height="28" rx="2" fill="#ffb800" opacity=".55"/></pattern>
+<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0e1830" stop-opacity=".75"/><stop offset=".6" stop-color="#0e1830" stop-opacity="0"/></linearGradient></defs>
+<circle cx="1280" cy="190" r="170" fill="#ffb800" opacity=".07"/><circle cx="1280" cy="190" r="80" fill="#ffb800" opacity=".16"/>
+<path d="M0 640 Q300 540 600 620 T1200 600 T1600 620 V900 H0Z" fill="#14264b"/>
+<rect x="196" y="520" width="324" height="214" fill="#1b2f5c"/><rect x="196" y="520" width="324" height="214" fill="url(#win)"/>
+<rect x="1080" y="520" width="324" height="214" fill="#1b2f5c"/><rect x="1080" y="520" width="324" height="214" fill="url(#win)"/>
+<rect x="520" y="440" width="560" height="294" fill="#1f356a"/>
+<polygon points="490,444 800,350 1110,444" fill="#27427f"/>
+<rect x="560" y="444" width="24" height="256" rx="3" fill="#2f4a82"/><rect x="650" y="444" width="24" height="256" rx="3" fill="#2f4a82"/><rect x="740" y="444" width="24" height="256" rx="3" fill="#2f4a82"/><rect x="830" y="444" width="24" height="256" rx="3" fill="#2f4a82"/><rect x="920" y="444" width="24" height="256" rx="3" fill="#2f4a82"/><rect x="1010" y="444" width="24" height="256" rx="3" fill="#2f4a82"/>
+<rect x="768" y="590" width="64" height="144" rx="4" fill="#0e1830"/><rect x="768" y="590" width="64" height="10" rx="4" fill="#ffb800" opacity=".8"/>
+<rect x="760" y="236" width="80" height="120" fill="#223b72"/><polygon points="750,236 800,176 850,236" fill="#8b0f14"/>
+<circle cx="800" cy="278" r="20" fill="#ffb800" opacity=".85"/><path d="M800 266v12l8 5" stroke="#0e1830" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M800 176V138" stroke="#9fb0d0" stroke-width="3"/><path d="M800 138h34l-8 10 8 10h-34z" fill="#ffb800"/>
+<rect x="0" y="734" width="1600" height="166" fill="#0a1226"/>
+<polygon points="770,734 830,734 1060,900 540,900" fill="#1a2b52"/>
+<rect x="104" y="560" width="12" height="60" fill="#0c1a38"/><circle cx="110" cy="560" r="70" fill="#142b55"/><circle cx="75" cy="584" r="49" fill="#183461"/><circle cx="148" cy="581" r="46" fill="#183461"/><rect x="374" y="590" width="12" height="60" fill="#0c1a38"/><circle cx="380" cy="590" r="55" fill="#142b55"/><circle cx="352" cy="609" r="38" fill="#183461"/><circle cx="410" cy="606" r="36" fill="#183461"/><rect x="1224" y="590" width="12" height="60" fill="#0c1a38"/><circle cx="1230" cy="590" r="55" fill="#142b55"/><circle cx="1202" cy="609" r="38" fill="#183461"/><circle cx="1260" cy="606" r="36" fill="#183461"/><rect x="1484" y="560" width="12" height="60" fill="#0c1a38"/><circle cx="1490" cy="560" r="70" fill="#142b55"/><circle cx="1455" cy="584" r="49" fill="#183461"/><circle cx="1528" cy="581" r="46" fill="#183461"/>
+<circle cx="700" cy="800" r="9" fill="#070e1f"/><rect x="690" y="811" width="20" height="44" rx="9" fill="#070e1f"/><circle cx="760" cy="812" r="9" fill="#070e1f"/><rect x="750" y="823" width="20" height="44" rx="9" fill="#070e1f"/><circle cx="880" cy="806" r="9" fill="#070e1f"/><rect x="870" y="817" width="20" height="44" rx="9" fill="#070e1f"/><circle cx="930" cy="818" r="9" fill="#070e1f"/><rect x="920" y="829" width="20" height="44" rx="9" fill="#070e1f"/>
+<g fill="#fff"><circle class="tw tw0" cx="120" cy="80" r="1.6"/><circle class="tw tw1" cx="300" cy="150" r="2.4000000000000004"/><circle class="tw tw2" cx="460" cy="60" r="1.6"/><circle class="tw tw0" cx="640" cy="120" r="2.4000000000000004"/><circle class="tw tw1" cx="900" cy="70" r="1.6"/><circle class="tw tw2" cx="1050" cy="150" r="2.4000000000000004"/><circle class="tw tw0" cx="1180" cy="50" r="1.6"/><circle class="tw tw1" cx="1400" cy="110" r="2.4000000000000004"/><circle class="tw tw2" cx="1520" cy="200" r="1.6"/><circle class="tw tw0" cx="200" cy="230" r="2.4000000000000004"/><circle class="tw tw1" cx="980" cy="230" r="1.6"/><circle class="tw tw2" cx="560" cy="210" r="2.4000000000000004"/></g><rect width="1600" height="900" fill="url(#fade)"/></svg>
+<h1><span class="g">Gateway to</span><span class="w">academic excellence.</span></h1>
+<p class="lead">Step into the unified digital ecosystem of your campus, streamlining academic management, fostering collaboration, and preparing every student for the future.</p>
+<div class="ctas"><button class="btn cta" onclick="openLogin('student')">Sign in to the portal <svg class="i"><use href="#i-arrow"/></svg></button><button class="btn cta ghost2" onclick="openAdm()">Apply for admission</button></div>
+<div class="cards">
+<button class="gc" onclick="openLogin('student')"><span class="ic"><svg class="i"><use href="#i-cap"/></svg></span>Student<small>Schedule and grades</small></button>
+<button class="gc" onclick="openLogin('teacher')"><span class="ic"><svg class="i"><use href="#i-book"/></svg></span>Teacher<small>Classes and attendance</small></button>
+<button class="gc" onclick="openLogin('parent')"><span class="ic"><svg class="i"><use href="#i-users"/></svg></span>Parent<small>Child&#39;s progress</small></button>
+<button class="gc" onclick="openLogin('admin')"><span class="ic"><svg class="i"><use href="#i-shield"/></svg></span>Admin<small>Campus management</small></button>
+</div>
+<a class="scroll" href="#latest">Latest announcements</a>
+</main>
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60V32C240 0 480 4 720 28S1200 60 1440 18V60Z"/></svg>
+<section id="stats"><div class="wrap"><div class="sgrid" id="sgrid">
+<div class="st"><b data-n="1240">1,240</b><span>Students</span></div>
+<div class="st"><b data-n="64">64</b><span>Teachers</span></div>
+<div class="st"><b data-n="8">8</b><span>Programs</span></div>
+<div class="st"><b>24/7</b><span>Portal access</span></div>
+</div></div></section>
+<section id="latest"><div class="wrap">
+<h2 class="ph">Latest announcements</h2><p class="pl">Stay updated with news from your campus.</p>
+<div class="agrid" id="hann"></div>
+<button class="btn" style="margin-top:26px" onclick="go('announcements')">View all announcements <svg class="i"><use href="#i-arrow"/></svg></button>
+</div></section>
+<section id="teachers"><div class="wrap">
+<h2 class="ph">Our teachers</h2><p class="pl">Meet the faculty behind your classes.</p>
+<div class="tgrid" id="tgrid"></div>
+</div></section>
+</div>
+
+<!-- ANNOUNCEMENTS -->
+<div class="view" id="announcements"><section><div class="wrap">
+<h1 class="ph">Announcements</h1><p class="pl">News, reminders, and events from your campus.</p>
+<div class="agrid" id="pann"></div>
+</div></section></div>
+
+<!-- PORTALS -->
+<div class="view" id="portals"><section><div class="wrap">
+<h1 class="ph">Portals</h1><p class="pl">Choose the portal that matches your role.</p>
+<div class="pgrid">
+<div class="pc"><span class="ic"><svg class="i"><use href="#i-cap"/></svg></span><h3>Student Portal</h3><p>View your class schedule, grades, and school announcements.</p><button class="btn" onclick="openLogin('student')">Sign in as Student</button></div>
+<div class="pc"><span class="ic"><svg class="i"><use href="#i-book"/></svg></span><h3>Teacher Portal</h3><p>Manage your classes, record attendance, and enter grades.</p><button class="btn" onclick="openLogin('teacher')">Sign in as Teacher</button></div>
+<div class="pc"><span class="ic"><svg class="i"><use href="#i-users"/></svg></span><h3>Parent Portal</h3><p>Follow your child&#39;s progress, attendance, and tuition balance.</p><button class="btn" onclick="openLogin('parent')">Sign in as Parent</button></div>
+<div class="pc"><span class="ic"><svg class="i"><use href="#i-shield"/></svg></span><h3>Admin Portal</h3><p>Oversee enrollment, accounts, and campus announcements.</p><button class="btn" onclick="openLogin('admin')">Sign in as Admin</button></div>
+</div></div></section></div>
+
+<!-- TEACHER PROFILE -->
+<div class="view" id="tview"><section><div class="wrap">
+<button class="btn ghost" onclick="backT()"><svg class="i"><use href="#i-back"/></svg>Back to teachers</button>
+<div id="tv"></div>
+</div></section></div>
+
+<!-- COURSES -->
+<div class="view" id="courses"><section><div class="wrap">
+<h1 class="ph">Courses</h1><p class="pl">Programs offered on campus.</p>
+<div class="cgrid">
+<article class="cc" tabindex="0"><span class="ic"><svg class="i"><use href="#i-laptop"/></svg></span><h3>BS in Information Technology</h3><span class="code">BSIT</span><p>Training in networks, web development, and systems administration.</p></article>
+<article class="cc" tabindex="0"><span class="ic"><svg class="i"><use href="#i-code"/></svg></span><h3>BS in Computer Science</h3><span class="code">BSCS</span><p>Focus on algorithms, artificial intelligence, and software engineering.</p></article>
+<article class="cc" tabindex="0"><span class="ic"><svg class="i"><use href="#i-chip"/></svg></span><h3>BS in Computer Engineering</h3><span class="code">BSCE</span><p>Hardware and software systems designed to work together.</p></article>
+<article class="cc" tabindex="0"><span class="ic"><svg class="i"><use href="#i-circuit"/></svg></span><h3>BS in Electronics Engineering</h3><span class="code">BSEE</span><p>Design of electronic circuits and communication technology.</p></article>
+<article class="cc" tabindex="0"><span class="ic"><svg class="i"><use href="#i-case"/></svg></span><h3>BS in Business Administration</h3><span class="code">BSBA</span><p>Management, finance, and leadership skills for the digital age.</p></article>
+</div></div></section></div>
+
+<!-- FEATURES -->
+<div class="view" id="features"><section><div class="wrap">
+<h1 class="ph">Features</h1><p class="pl">Built to make everyone&#39;s day easier.</p>
+<div class="grid">
+<div><h3>Smart schedule</h3><p>Today&#39;s classes show up right away, with the room and time.</p></div>
+<div><h3>Real-time grades</h3><p>See your marks as soon as your teacher posts them.</p></div>
+<div><h3>Alerts and announcements</h3><p>Never miss a class suspension, deadline, or event.</p></div>
+<div><h3>Attendance tracking</h3><p>Teachers record it once, and parents see it the same day.</p></div>
+<div><h3>Online payments</h3><p>Check your balance without lining up.</p></div>
+<div><h3>Works on any device</h3><p>Use it on your phone, tablet, or computer.</p></div>
+</div></div></section></div>
+
+<!-- SUPPORT -->
+<div class="view" id="support"><section><div class="wrap">
+<h1 class="ph">Support</h1><p class="pl">Find quick answers or send us a message.</p>
+<div class="sup"><div>
+<details><summary>I forgot my password</summary><p>Contact your campus IT office to have your password reset.</p></details>
+<details><summary>Where do I find my Student ID?</summary><p>It is printed on your school ID and on your enrollment form.</p></details>
+<details><summary>My grades are not showing</summary><p>Grades appear after your teacher posts them. Check again later.</p></details>
+<details><summary>How do parents get access?</summary><p>Ask the registrar to link your account to your child&#39;s record.</p></details>
+</div>
+<form id="sf" class="box" style="max-width:none">
+<h2>Contact us</h2>
+<label for="sn">Name</label><input id="sn" required>
+<label for="se">Email</label><input id="se" type="email" required>
+<label for="sm2">Message</label><textarea id="sm2" rows="4" required></textarea>
+<button class="btn" type="submit">Send message</button>
+<div class="note" id="sm" role="status"></div>
+</form></div>
+</div></section></div>
+
+<footer id="foot"><div class="wrap">
+<div class="fgrid">
+<div><div class="fb"><span class="mark">CS</span><b>CAMPUS SYNC</b></div><p>One smart portal for schedules, grades, announcements, and enrollment.</p></div>
+<div><h4>Quick links</h4><button class="fl" onclick="go('portals')">Portals</button><button class="fl" onclick="go('courses')">Courses</button><button class="fl" onclick="go('announcements')">Announcements</button><button class="fl" onclick="openAdm()">Apply for admission</button></div>
+<div><h4>Need help?</h4><button class="fl" onclick="go('support')">Support</button><p>Registrar&#39;s Office<br>Monday to Friday, 8:00 AM to 5:00 PM</p></div>
+</div>
+<div class="fcopy">© 2026 Campus Sync Smart Student Portal</div>
+</div></footer>
+
+<!-- ADMISSION -->
+<div class="view" id="admission">
+<div class="abar"><div class="wrap ain">
+<button class="sq" onclick="go('home')" aria-label="Back"><svg class="i"><use href="#i-back"/></svg></button>
+<span class="mark">CS</span>
+<div class="atl"><b>Student Registration &amp; Admission</b><small>Register or apply for admission · Campus Sync</small></div>
+<button class="sq x" onclick="go('home')" aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
+</div></div>
+<div class="afw">
+<div class="banner"><span class="bic"><svg class="i"><use href="#i-cap"/></svg></span><div><h1>Register or Apply for Admission</h1><p>Official student profile intake &amp; enrollment registry</p></div></div>
+<div class="fcard">
+<div id="aform">
+<h2 class="ft">Student Particulars</h2><p class="fnote">Please provide accurate information for institutional evaluation.</p>
+<div class="lv" role="tablist"><button type="button" role="tab" data-l="college">College</button><button type="button" role="tab" data-l="shs">Senior High</button></div>
+<form id="af">
+<div class="f2"><div class="fld"><label for="fn">First Name</label><input id="fn" type="text" placeholder="Given Name" required></div><div class="fld"><label for="mn">Middle Name</label><input id="mn" type="text" placeholder="Optional"></div></div>
+<div class="f1"><div class="fld"><label for="ln">Last Name</label><input id="ln" type="text" placeholder="Family Name" required></div></div>
+<div class="f2"><div class="fld"><label for="em">Personal Email</label><input id="em" type="email" placeholder="example@email.com" required></div><div class="fld"><label for="ph">Phone Number</label><input id="ph" type="tel" placeholder="+63 900 000 0000" required></div></div>
+<div class="f2"><div class="fld"><label for="bd">Date of Birth</label><input id="bd" type="date" placeholder="" required></div><div class="fld"><label for="ty">Applicant Type</label><select id="ty"><option>New student</option><option>Transferee</option><option>Returnee</option></select></div></div>
+<div class="f1"><div class="fld"><label for="addr">Home Address</label><input id="addr" type="text" placeholder="House no., street, barangay, city" required></div></div>
+<div class="f1"><div class="fld"><label for="prog" id="plabel">Preferred Program</label><select id="prog"></select></div></div>
+<div class="f1"><div class="fld"><label for="sc">Last School Attended</label><input id="sc" type="text" placeholder="Name of previous school"></div></div>
+<div class="f2"><div class="fld"><label for="gn">Guardian Name</label><input id="gn" type="text" placeholder="Full name" required></div><div class="fld"><label for="gc">Guardian Contact</label><input id="gc" type="tel" placeholder="+63 900 000 0000" required></div></div>
+<button class="btn" type="submit">Submit application</button>
+<p class="fnote" style="margin-top:12px">This is a demo form. Nothing is sent or saved.</p>
+</form></div>
+<div id="adone" hidden><h2 class="ft">Application received</h2>
+<p class="fnote" style="font-size:1rem">Thank you, <b id="dn"></b>. Your reference number is <b id="ref"></b>. The admissions office will contact you by email or phone.</p>
+<button class="btn" style="margin-top:18px" onclick="go('home')">Back to home</button></div>
+</div></div></div>
+
+<!-- LOGIN -->
+<div class="view" id="loginv">
+<div class="login"><div class="box">
+<h2>Sign In</h2>
+<p>Choose who you are and enter your details.</p>
+<div class="seg" role="tablist">
+<button role="tab" data-r="student">Student</button><button role="tab" data-r="teacher">Teacher</button><button role="tab" data-r="parent">Parent</button><button role="tab" data-r="admin">Admin</button></div>
+<form id="lf">
+<label for="uid" id="uidl">Student ID</label><input id="uid" autocomplete="username">
+<label for="pw">Password</label><input id="pw" type="password" autocomplete="current-password">
+<div class="err" id="err" role="alert"></div>
+<button class="btn" type="submit">Sign In</button>
+</form>
+<button class="back" onclick="go('home')">Back to home</button>
+<button class="back" onclick="openAdm()">New student? Register here</button>
+<p class="note">This is a demo: any ID and password will work.</p>
+</div></div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="view" id="dashv">
+<div class="wrap">
+<div class="bar"><div class="who"><button class="brand" onclick="go('home')" aria-label="Home"><span class="mark">CS</span></button><b id="hi"></b><span class="tag" id="tag"></span></div>
+<button class="btn ghost" id="out">Log Out</button></div>
+<div class="dash"><div class="side" id="side" role="tablist"></div><div class="main" id="main"></div></div>
+</div>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
